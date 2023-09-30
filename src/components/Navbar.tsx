@@ -23,10 +23,10 @@ const Nav: React.FC = () => (
             <a href="#skills">SKILLS</a>
           </li>
           <li>
-            <a href="#projects">PROJECTS</a>
+            <a href="#cmdsection">CONSOLE</a>
           </li>
           <li>
-            <a href="#footer">FOOTER</a>
+            <a href="#projects">PROJECTS</a>
           </li>
         </ul>
       </nav>

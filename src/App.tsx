@@ -7,6 +7,7 @@ import "./index.css";
 import GithubStats from "./components/GithubStats";
 import Footer from "./components/Footer";
 import Return from "./components/Return";
+import CommandLine from "./components/CommandLine";
 
 const App: React.FC = () => {
   const [github, setGithub] = useState<any>(null);
@@ -35,6 +36,7 @@ const App: React.FC = () => {
       <Nav />
       <About />
       <Skills />
+      <CommandLine />
       {githubHeader ? (
         <GithubStats data={githubHeader} />
       ) : (

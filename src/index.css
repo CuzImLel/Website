@@ -22,12 +22,14 @@ html {
 }
 
 .navbar ul {
+  position: fixed;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   list-style-type: none;
   font-size: 18px;
-  height: 80px;
+  height: 60px;
+  width: 100%;
   font-weight: 500;
   background-color: rgba(85, 113, 190, 0.281);
   border-bottom: 3px solid rgb(55, 83, 158);
@@ -139,13 +141,14 @@ html {
 .skills {
   padding: 50px;
   min-height: 1000px;
-  background: radial-gradient(circle, #12152c 0, #1a243d 100%);
+  background: radial-gradient(circle, #0b0c16 0, #1a243d 100%);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
   align-items: center;
-  border-bottom: 8px solid transparent;
+
+  border-bottom: 5px solid transparent;
   border-image: linear-gradient(
     0.25turn,
     rgb(56, 114, 153),
@@ -156,8 +159,11 @@ html {
 }
 
 .skills span h1 {
-  border-bottom: 5px solid rgb(93, 104, 207);
-  padding: 10px;
+  border-bottom: 5px solid rgba(160, 243, 195, 0.507);
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
 }
 
 .abouttext {
@@ -196,6 +202,7 @@ html {
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 }
 
 .aboutbuttons button span {
@@ -224,16 +231,16 @@ html {
 }
 
 .skills div {
-  width: 200px;
+  min-width: 180px;
   height: 400px;
   display: flex;
   text-align: center;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #2a3d7c;
-  border-radius: 10px;
-  padding: 50px;
-  border: 3px solid rgb(40, 128, 187);
+  background-color: #160d4281;
+  border-radius: 20px;
+  padding: 20px 50px 50px 50px;
+  border: 5px solid rgb(93, 69, 158);
 }
 
 .skills div ul {
@@ -243,14 +250,14 @@ html {
 .skills .header {
   display: flex;
   width: 100%;
-  background-color: #4b316d2d;
-  color: #5cc3ff;
+  background-color: #150c206c;
+  color: #a2d5ff;
   font-size: 40px;
   font-weight: 600;
   font-family: sans-serif;
   justify-content: center;
   padding: 20px;
-  border: 3px solid rgb(61, 168, 187);
+  border: 3px solid rgb(93, 69, 158);
 }
 
 .skills div ul li a,
@@ -260,7 +267,7 @@ html {
 }
 
 .skills div ul li a {
-  margin-left: 20px;
+  margin-left: 15px;
   font-weight: 500;
   font-size: 20px;
 }
@@ -350,6 +357,7 @@ html {
   color: #ffffff;
   text-decoration: none;
   font-size: calc(15px + 0.6vw);
+  font-weight: 500;
   padding: 10px;
   font-family: "Roboto", sans-serif;
   border-bottom: 3px solid rgb(76, 175, 221);
@@ -381,7 +389,7 @@ html {
   display: flex;
   height: 200px;
   justify-content: center;
-  background-color: #46469e;
+  background-color: #2f4275;
   align-items: center;
   border-bottom: 5px solid rgb(110, 179, 127);
 }
@@ -456,6 +464,98 @@ html {
   font-size: calc(35px + 1vw);
   border: 2px solid blue;
   cursor: pointer;
+}
+
+.cmdsection {
+  height: 1000px;
+  width: 100%;
+  background-color: #1c1f3d;
+  border-bottom: 5px solid rgb(146, 146, 228);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.commandline {
+  border-radius: 20px;
+  height: 700px;
+  width: 75%;
+  background-color: rgb(20, 20, 20);
+}
+
+.commandline_top {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(37, 37, 37);
+  border-radius: 20px 20px 0px 0px;
+}
+
+.commandline_top_middle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+  justify-content: center;
+}
+
+.commandline_top_left {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  padding-left: 10px;
+}
+
+.commandline_top_right {
+  width: 25%;
+  padding-right: 10px;
+}
+
+.commandline_top_left div {
+  border-radius: 50%;
+  width: calc(0.7vw + 10px);
+  height: calc(0.7vw + 10px);
+  margin: 5px;
+  cursor: pointer;
+}
+
+.commandline_top_middle p {
+  font-size: calc(8px + 1.2vw);
+  font-family: sans-serif;
+  color: rgb(175, 175, 175);
+}
+
+.commandline_top_middle span {
+  font-size: calc(15px + 1vw);
+  color: #007299;
+}
+
+.commandline_body {
+  height: calc(100% + -80px);
+}
+
+.commandline_body textarea {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  padding: 15px;
+  line-height: 150%;
+  font-family: sans-serif;
+  font-size: calc(8px + 0.5vw);
+  color: #1c7337;
+  resize: none;
+}
+
+.green_dot {
+  background-color: rgb(71, 158, 71);
+}
+.red_dot {
+  background-color: rgb(250, 78, 78);
+}
+.yellow_dot {
+  background-color: rgb(228, 187, 76);
 }
 
 @media screen and (max-width: 600px) {
