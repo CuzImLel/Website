@@ -2,10 +2,13 @@ import React, { TextareaHTMLAttributes } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import { getCurrentAge } from "./utils";
+
+const age = getCurrentAge("2006-11-17");
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App data={{ age }} />
   </React.StrictMode>,
   document.getElementById("root")
 );
@@ -91,7 +94,7 @@ const commands: command[] = [
   },
   {
     name: "cat info.json",
-    output: '{name: "daniel", age: 16, favouriteLang: "TypeScript"}',
+    output: `{name: "daniel", age: ${age}, favouriteLang: "TypeScript"}`,
   },
   { name: "python ascii.py", output: ascii },
 ];

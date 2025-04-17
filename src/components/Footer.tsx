@@ -1,5 +1,7 @@
 import React from "react";
 
+const date = new Date().getFullYear();
+
 const Footer: React.FC = () => (
   <>
     <section className="footer" id="footer">
@@ -37,7 +39,7 @@ const Footer: React.FC = () => (
         </a>
       </div>
       <div className="copyright">
-        <p>Copyright © 2023 Just_Daniel. All Rights Reserved</p>
+        <p>Copyright © {date} Just_Daniel. All Rights Reserved</p>
       </div>
     </section>
   </>

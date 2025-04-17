@@ -9,7 +9,13 @@ import Footer from "./components/Footer";
 import Return from "./components/Return";
 import CommandLine from "./components/CommandLine";
 
-const App: React.FC = () => {
+interface props {
+  data: {
+    age: number;
+  };
+}
+
+const App: React.FC<props> = ({ data }) => {
   const [github, setGithub] = useState<any>(null);
   const [githubHeader, setGithubHeader] = useState<any>(null);
 
@@ -34,7 +40,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Nav />
-      <About />
+      <About data={{ age: data.age }} />
       <Skills />
       <CommandLine />
       {githubHeader ? (
